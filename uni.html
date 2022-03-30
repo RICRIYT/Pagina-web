@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Aceptacion en la uni</title>
+
+</head>
+
+<body background="uni.jpg">
+<form align="center">
+<table align="center" border=4 bordercolor="000000" width="50%" style="margin-top: 10.5%;">
+<tr>
+    <td colspan="2" style="color: rgb(0, 0, 0);"><span><h1>Aceptacion en la uni</h1></span></td>
+</tr>
+<tr>
+    <td style="color: rgb(0, 0, 0);"><h3>Ingrese su promedio de bachillerato:</h3></td>
+    <td><h3><input type="text" id="num1" size="5" style="padding: 5px;"></h3></td>
+</tr>
+<tr>
+    <td style="color: rgb(0, 0, 0);"><h3>Ingrese el resultado de su EXANI:</h3></td>
+    <td><input type="text" id="num2" size="5" style="padding: 5px;"></td>
+</tr>
+<tr>
+    <td style="color: rgb(0, 0, 0);"><h3>Ingrese el resultado de su examen de ingreso:</h3></td>
+    <td><input type="text" id="num3" size="5" style="padding: 5px;"></td>
+</tr>
+<tr>
+    <td style="color: rgb(0, 0, 0);"><h3>El numero menor es</h3></td>
+    <td><input type="text" id="resultado" size="auto" style="padding: 5px;" disabled ></td>
+</tr>
+<tr>
+    <td ><h4><a href="index.html" style="color: rgb(0, 0, 0);">Para volver a la pagina principal de click aqui.</a></h4></td>
+    <td><input type="button" value="Comprobar" onclick="calcular()"></td>
+</tr>
+</table>
+</form>
+<script>
+function calcular(){
+var numero1 = Number(document.getElementById("num1").value);
+var numero2 = Number(document.getElementById("num2").value);
+var numero3 = Number(document.getElementById("num3").value);
+
+if (numero1>=8.5 && numero2>=1050 && numero3>=800) {
+    document.getElementById("resultado").value = "Usted fue aceptado";
+}
+else
+    document.getElementById("resultado").value = "Usted no fue aceptado";
+}
+
+</script>
+
+</body>
+</html>

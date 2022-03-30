@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Calculo del IMC</title>
+
+</head>
+
+<body style="background-color: #e6fff2;" background="fondo.jpg">
+<form align="center">
+<table align="center" border=1 bordercolor="335BFF" width="50%">
+<tr>
+<td colspan="2" style="background-color: #a1ffd0;">
+<span style="font-size: 70px; line-height: normal;color: blue; font: italic;">Calculador de IMC</span></td>
+</tr>
+<tr>
+<td WIDTH="50%">Cual es su masa(kg):</td>
+<td><input type="text" id="numero1" size=5></td>
+</tr>
+<tr>
+<td>Cual es su estatura (en metros):</td>
+<td><input type="text" id="numero2" size=5></td>
+</tr>
+<tr>
+<td rowspan="3"><img src="imc.jpg" width=100% heigth=100% alt="Programación"></td>
+<td align="center"><input type="button" value="Calcular" onclick="imc()">
+<br>
+<input type="reset" value="Limpiar"></td>
+</tr>
+<tr>
+
+<td align="center">Su IMC es:</td>
+</tr>
+<tr>
+
+<td align="center"><input type="text" id="resultado" disabled ></td>
+</tr>
+<tr><td><b>Para volver a la pagina principal</b></td><td><a href="index.html"><h4>Pulse aqui.</h4></a></td>
+</tr>
+</table>
+</form>
+<script>
+function imc(){
+var numero1 = Number(document.getElementById("numero1").value);
+var numero2 = Number(document.getElementById("numero2").value);
+
+var imcs = numero1 / (numero2)**2;
+
+document.getElementById("resultado").value = imcs;
+}
+
+</script>
+
+</body>
+</html>

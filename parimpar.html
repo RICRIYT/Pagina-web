@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Numero par o impar?</title>
+
+</head>
+
+<body background="parimpar.jpg">
+<form align="center">
+<table align="center" border=4 bordercolor="#141961" width="50%" style="margin-top: 10.5%;">
+<tr>
+    <td colspan="2" style="color: rgb(0, 0, 0);"><span><h1>Numero par o impar?</h1></span></td>
+</tr>
+<tr>
+    <td style="color: rgb(0, 0, 0);"><h3>Ingrese el numero:</h3></td>
+    <td><h3><input type="text" id="num1" size="5" style="padding: 5px;"></h3></td>
+</tr>
+<tr>
+    <td style="color: rgb(0, 0, 0);"><h3>El numero es</h3></td>
+    <td><input type="text" id="resultado" size="auto" style="padding: 5px;" disabled ></td>
+</tr>
+<tr>
+    <td ><h4><a href="index.html" style="color: rgb(0, 0, 0);">Para volver a la pagina principal de click aqui.</a></h4></td>
+    <td><input type="button" value="Comprobar" onclick="calcular()"></td>
+</tr>
+</table>
+</form>
+<script>
+function calcular(){
+var numero1 = Number(document.getElementById("num1").value);
+
+if (numero1%2==0) {
+    document.getElementById("resultado").value = "El numero es par";
+}
+else {
+    document.getElementById("resultado").value = "El numero es impar";
+}
+}
+
+</script>
+
+</body>
+</html>

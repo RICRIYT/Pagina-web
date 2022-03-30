@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mayor de dos numeros</title>
+
+</head>
+
+<body background="num1.jpg">
+<form align="center">
+<table align="center" border=4 bordercolor="3f3f3f" width="50%" style="margin-top: 10.5%;">
+<tr>
+    <td colspan="2"><span><h1>MAYOR DE DOS NUMEROS</h1></span></td>
+</tr>
+<tr>
+    <td><h3>Ingrese el primer numero:</h3></td>
+    <td><h3><input type="text" id="num1" size="5" style="padding: 5px;"></h3></td>
+</tr>
+<tr>
+    <td><h3>Ingrese el segundo numero:</h3></td>
+    <td><input type="text" id="num2" size="5" style="padding: 5px;"></td>
+</tr>
+<tr>
+    <td><h3>El numero mayor es</h3></td>
+    <td><input type="text" id="resultado" size="auto" style="padding: 5px;" disabled ></td>
+</tr>
+<tr>
+    <td><h4><a href="index.html">Para volver a la pagina principal de click aqui.</a></h4></td>
+    <td><input type="button" value="Comprobar" onclick="calcular()"></td>
+</tr>
+</table>
+</form>
+<script>
+function calcular(){
+var numero1 = Number(document.getElementById("num1").value);
+var numero2 = Number(document.getElementById("num2").value);
+
+if (numero1 > numero2) {
+    document.getElementById("resultado").value = numero1+" y el menor es "+numero2;
+}
+else
+    document.getElementById("resultado").value = numero2+" y el menor es "+numero1;
+
+}
+
+</script>
+
+</body>
+</html>

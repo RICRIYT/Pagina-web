@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Signo zodiacal</title>
+
+</head>
+
+<body background="zodiacal.jpg">
+<form align="center">
+<table align="center" border=4 bordercolor="cyan" width="50%" style="margin-top: 10.5%;">
+<tr>
+    <td colspan="2" style="color: rgb(255, 253, 253);"><span><h1>Signo zodiacal</h1></span></td>
+</tr>
+<tr>
+    <td><h3 style="color: rgb(255, 255, 255);">Ingrese su dia de nacimiento:</h3></td>
+    <td><h3><input type="text" id="num1" size="5" style="padding: 5px;"></h3></td>
+</tr>
+<tr>
+    <td><h3 style="color: rgb(255, 255, 255);">Ingrese su mes de nacimiento (con numero):</h3></td>
+    <td><input type="text" id="num2" size="5" style="padding: 5px;"></td>
+</tr>
+<tr>
+    <td><h3 style="color: rgb(255, 255, 255);">Su signo es</h3></td>
+    <td><input type="text" id="resultado" size="auto" style="padding: 5px;" disabled ></td>
+</tr>
+<tr>
+    <td><h4><a href="index.html" style="color: rgb(255, 255, 255);">Para volver a la pagina principal de click aqui.</a></h4></td>
+    <td><input type="button" value="Comprobar" onclick="calcular()"></td>
+</tr>
+</table>
+</form>
+<script>
+function calcular(){
+var numero1 = Number(document.getElementById("num1").value);
+var numero2 = Number(document.getElementById("num2").value);
+
+if (numero1>=21 && numero2==3 || numero1<=20 && numero2==04) {
+    document.getElementById("resultado").value = "Su signo es Aries";
+}
+
+else if (numero1>=21 && numero2==4 || numero1<=21 && numero2==05) {
+    document.getElementById("resultado").value = "Su signo es Tauro";
+}
+
+else if (numero1>=22 && numero2==5 || numero1<=21 && numero2==06) {
+    document.getElementById("resultado").value = "Su signo es Geminis";
+}
+
+else if (numero1>=22 && numero2==6 || numero1<=22 && numero2==07) {
+    document.getElementById("resultado").value = "Su signo es Cancer";
+}
+
+else if (numero1>=23 && numero2==7 || numero1<=23 && numero2==08) {
+    document.getElementById("resultado").value = "Su signo es Leo";
+}
+
+else if (numero1>=24 && numero2==8 || numero1<=23 && numero2==09) {
+    document.getElementById("resultado").value = "Su signo es Virgo";
+}
+
+else if (numero1>=24 && numero2==9 || numero1<=23 && numero2==10) {
+    document.getElementById("resultado").value = "Su signo es Libra";
+}
+
+else if (numero1>=24 && numero2==10 || numero1<=22 && numero2==11) {
+    document.getElementById("resultado").value = "Su signo es Escorpion";
+}
+
+else if (numero1>=23 && numero2==11 || numero1<=21 && numero2==12) {
+    document.getElementById("resultado").value = "Su signo es Sagitario";
+}
+
+else if (numero1>=22 && numero2==12 || numero1<=20 && numero2==01) {
+    document.getElementById("resultado").value = "Su signo es Capricornio";
+}
+
+else if (numero1>=21 && numero2==1 || numero1<=18 && numero2==02) {
+    document.getElementById("resultado").value = "Su signo es Acuario";
+}
+
+else if (numero1>=19 && numero2==2 || numero1<=20 && numero2==03) {
+    document.getElementById("resultado").value = "Su signo es Piscis";
+}
+
+}
+
+</script>
+
+</body>
+</html>

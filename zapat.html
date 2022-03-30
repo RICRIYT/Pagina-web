@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tienda de zapatos</title>
+
+</head>
+
+<body background="zapat.jpg">
+<form align="center">
+<table align="center" border=4 bordercolor="3f3f3f" width="50%" style="margin-top: 10.5%;">
+<tr>
+    <td colspan="2"><span><h1>Tienda de zapatos</h1></span></td>
+</tr>
+<tr>
+    <td><h3>Ingrese cual es el total de su compra:</h3></td>
+    <td><h3><input type="text" id="num1" size="5" style="padding: 5px;"></h3></td>
+</tr>
+<tr>
+    <td><h3>Ingrese el tipo de membresia que tiene:</h3></td>
+    <td><input type="text" id="num2" size="5" style="padding: 5px;"></td>
+</tr>
+<tr>
+    <td><h3>El total de su compra es:</h3></td>
+    <td><input type="text" id="resultado" size="32" style="padding: 5px;" disabled ></td>
+</tr>
+<tr>
+    <td><h4><a href="index.html">Para volver a la pagina principal de click aqui.</a></h4></td>
+    <td><input type="button" value="Comprobar" onclick="calcular()"></td>
+</tr>
+</table>
+</form>
+<script>
+function calcular(){
+var costo = Number(document.getElementById("num1").value);
+var memb = Number(document.getElementById("num2").value);
+var desc = 0;
+var costofin = 0;
+
+if (memb == 105) {
+    desc = costo*13/100;
+    costofin=costo-desc;
+    document.getElementById("resultado").value = costofin+" se le aplico un descuento del 13%";
+}
+else if (memb==206){
+    desc = costo*22/100;
+    costofin=costo-desc;
+    document.getElementById("resultado").value = costofin+" se le aplico un descuento del 22%";
+}
+else if (memb==307){
+    desc = costo*28/100;
+    costofin=costo-desc;
+    document.getElementById("resultado").value = costofin+" se le aplico un descuento del 28%";
+}
+else
+    document.getElementById("resultado").value = costo+" no cuenta con una membresia valida";
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Menor, mayor y promedio de numeros</title>
+
+</head>
+
+<body background="memapro.jpg">
+<form align="center">
+<table align="center" border=4 bordercolor="fffff" width="50%" style="margin-top: 5%;">
+<tr>
+    <td colspan="2" style="color: aliceblue;"><span><h1>Menor, mayor y promedio de numeros</h1></span></td>
+</tr>
+<tr>
+    <td style="color: aliceblue;"><h3>Ingrese el primer numero:</h3></td>
+    <td><h3><input type="text" id="num1" size="5" style="padding: 5px;"></h3></td>
+</tr>
+<tr>
+    <td style="color: aliceblue;"><h3>Ingrese el segundo numero:</h3></td>
+    <td><input type="text" id="num2" size="5" style="padding: 5px;"></td>
+</tr>
+<tr>
+    <td style="color: aliceblue;"><h3>Ingrese el tercer numero:</h3></td>
+    <td><input type="text" id="num3" size="5" style="padding: 5px;"></td>
+</tr>
+<tr>
+    <td style="color: aliceblue;"><h3>Ingrese el cuarto numero:</h3></td>
+    <td><input type="text" id="num4" size="5" style="padding: 5px;"></td>
+</tr>
+<tr>
+    <td style="color: aliceblue;"><h3>Ingrese el quinto numero:</h3></td>
+    <td><input type="text" id="num5" size="5" style="padding: 5px;"></td>
+</tr>
+
+<tr>
+    <td style="color: aliceblue;"><h3>El orden ascendente es</h3></td>
+    <td><input type="text" id="resultado1" size="auto" style="padding: 5px;" disabled ></td>
+</tr>
+
+<tr>
+    <td ><h4><a href="index.html" style="color: aliceblue;">Para volver a la pagina principal de click aqui.</a></h4></td>
+    <td><input type="button" value="Comprobar" onclick="calcular()"></td>
+</tr>
+</table>
+</form>
+<script>
+function calcular(){
+var numero1 = Number(document.getElementById("num1").value);
+var numero2 = Number(document.getElementById("num2").value);
+var numero3 = Number(document.getElementById("num3").value);
+var numero4 = Number(document.getElementById("num4").value);
+var numero5 = Number(document.getElementById("num5").value);
+
+const a=[numero1,numero2,numero3,numero4,numero5];
+
+for (var i=0; i< a.length; i++)
+    for (var u=0; u< a.length; u++)
+        if (a[i] > a[u])
+            a[u];
+}
+
+document.getElementById("resultado1").value=a;
+
+</script>
+
+</body>
+</html>
